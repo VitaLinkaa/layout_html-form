@@ -1,0 +1,16 @@
+
+input {
+  margin-bottom: 10px;
+}
+
+fieldset label:last-child {
+  margin-bottom: 0;
+}
+
+fieldset {
+  margin-bottom: 20px;
+}
+
+#select_car {
+  font-size: 13px;
+}
