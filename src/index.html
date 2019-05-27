@@ -10,9 +10,79 @@
           minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="GET" autocomplete='off'>
+    <fieldset class='personal'>
+      <legend>Personal information</legend>
+          <label for='surname'>
+            Surname:</label>
+          <input type='surname' id='surname' required class='non'></br>
+          <label for='name'>
+            Name:</label>
+          <input type='name' id='name' required></br>
+          <label for='old'>
+            How old are You? </label>
+          <input type='number' id='old' value='12' min='0' max='150' data-qa='field-value'><br>
+          <label for='date'>
+            Full date of birth:</label>
+          <input type='date' placeholder='mm/dd/yyyy'><br>
+          <label for='agr'>
+            I accept the term of the agreement</label>
+          <input type='checkbox' required><br>
+    </fieldset>
+
+    <fieldset class='registration'>
+        <legend>Registration</legend>
+          <label for='email'>
+            E-mail:</label>
+          <input type='email' required placeholder='email@example.com' data-qa='field-placeholder'><br>
+          <label for='password'>
+            Password:</label>
+          <input type='password' id='password' required maxlength="12">
+    </fieldset>
+
+    <fieldset class='fact'>
+        <legend>An interesting fact about you!</legend>
+          <label for='select'>Do you love cats?</label>
+          <input type="radio" name='optional1' id='select' value='Yes'> Yes
+          <input type="radio" name='optional1' id='select' value='No'> No<br>
+          <label for='color'>
+            What is you favorite color?</label>
+          <input type="color" disabled="disabled" id='color'></label><br>
+          <label for='time'>
+            What time do you go to bed?
+          <input type='time' id='time'><br>
+          <label for='select_car'>
+            What are your favorite brand of cars?</label>
+              <select size='4' multiple>
+                <option id='select_car' value='BMW'>BMW</option>
+                <option id='select_car' value='Audi'>Audi</option>
+                <option id='select_car' value='Lada'>Lada</option>
+              </select><br>
+          <label for='range'>
+            How do rate our work?</label>
+          <input type="range" id='range' min="0" max="100" step="1" value="0">
+    </fieldset>
+
+    <fieldset class='additional'>
+        <legend>Additional info</legend>
+        <label for ='info'>
+          Comments:
+          <textarea name="text" id="info" cols="20" rows="2"></textarea><br>
+        <label for ='recommend'>
+          Would you recommend us?</label>
+        <select name='recommend' id='recommend'>
+          <option value="Yes">yes</option>
+          <option value="No">no</option>
+        </select><br>
+    </fieldset>
+
+    <label for='Submit'>
+      <input type='submit' value='Submit' id='Submit'>
+    </label>
+  </form>
 
 <script type="text/javascript" src="./main.js"></script>
 </body>
